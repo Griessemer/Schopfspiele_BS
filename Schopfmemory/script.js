@@ -1,7 +1,27 @@
 const NUMBER_OF_PAIRS = 6;  // Anzahl der auszuwählenden Paare (also insgesamt 2*6 Karten)
 
 const allImages = [
-  'img/Bild_001.jpg', 'img/Bild_002.jpg', 'img/Bild_052.jpg', 'img/Bild_003.jpg', 'img/Bild_004.jpg', 'img/Bild_005.jpg', 'img/Bild_006.jpg', 'img/Bild_007.jpg', 'img/Bild_008.jpg', 'img/Bild_009.jpg', 'img/Bild_010.jpg', 'img/Bild_011.jpg', 'img/Bild_012.jpg', 'img/Bild_013.jpg', 'img/Bild_014.jpg', 'img/Bild_015.jpg', 'img/Bild_016.jpg', 'img/Bild_017.jpg', 'img/Bild_018.jpg', 'img/Bild_019.jpg', 'img/Bild_020.jpg', 'img/Bild_021.jpg', 'img/Bild_022.jpg', 'img/Bild_023.jpg', 'img/Bild_024.jpg', 'img/Bild_025.jpg', 'img/Bild_026.jpg', 'img/Bild_027.jpg', 'img/Bild_028.jpg', 'img/Bild_029.jpg', 'img/Bild_030.jpg', 'img/Bild_031.jpg', 'img/Bild_032.jpg', 'img/Bild_033.jpg', 'img/Bild_034.jpg', 'img/Bild_035.jpg', 'img/Bild_036.jpg', 'img/Bild_037.jpg', 'img/Bild_038.jpg', 'img/Bild_039.jpg', 'img/Bild_040.jpg', 'img/Bild_041.jpg', 'img/Bild_042.jpg', 'img/Bild_043.jpg', 'img/Bild_044.jpg', 'img/Bild_045.jpg', 'img/Bild_046.jpg', 'img/Bild_047.jpg', 'img/Bild_048.jpg', 'img/Bild_049.jpg', 'img/Bild_050.jpg', 'img/Bild_051.jpg'
+  'img/Bild_001.jpg', 'img/Bild_002.jpg', 'img/Bild_003.jpg',
+  'img/Bild_004.jpg', 'img/Bild_005.jpg', 'img/Bild_006.jpg',
+  'img/Bild_007.jpg', 'img/Bild_008.jpg', 'img/Bild_009.jpg',
+  'img/Bild_010.jpg', 'img/Bild_011.jpg', 'img/Bild_012.jpg',
+  'img/Bild_013.jpg', 'img/Bild_014.jpg', 'img/Bild_015.jpg',
+  'img/Bild_016.jpg', 'img/Bild_017.jpg', 'img/Bild_018.jpg',
+  'img/Bild_019.jpg', 'img/Bild_020.jpg', 'img/Bild_021.jpg',
+  'img/Bild_022.jpg', 'img/Bild_023.jpg', 'img/Bild_024.jpg',
+  'img/Bild_025.jpg', 'img/Bild_026.jpg', 'img/Bild_027.jpg',
+  'img/Bild_028.jpg', 'img/Bild_029.jpg', 'img/Bild_030.jpg',
+  'img/Bild_031.jpg', 'img/Bild_032.jpg', 'img/Bild_033.jpg',
+  'img/Bild_034.jpg', 'img/Bild_035.jpg', 'img/Bild_036.jpg',
+  'img/Bild_037.jpg', 'img/Bild_038.jpg', 'img/Bild_039.jpg',
+  'img/Bild_040.jpg', 'img/Bild_041.jpg', 'img/Bild_042.jpg',
+  'img/Bild_043.jpg', 'img/Bild_044.jpg', 'img/Bild_045.jpg',
+  'img/Bild_046.jpg', 'img/Bild_047.jpg', 'img/Bild_048.jpg',
+  'img/Bild_049.jpg', 'img/Bild_050.jpg', 'img/Bild_051.jpg',
+  'img/Bild_052.jpg', 'img/Bild_053.jpg', 'img/Bild_054.jpg',
+  'img/Bild_055.jpg', 'img/Bild_056.jpg', 'img/Bild_057.jpg',
+  'img/Bild_058.jpg', 'img/Bild_059.jpg', 'img/Bild_060.jpg',
+  'img/Bild_061.jpg', 'img/Bild_062.jpg', 'img/Bild_063.jpg'
 ];
 
 function getRandomImages(arr, count) {
