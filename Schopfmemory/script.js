@@ -1,4 +1,4 @@
-const NUMBER_OF_PAIRS = 6;  // Anzahl der auszuwählenden Paare (also insgesamt 2*6 Karten)
+const NUMBER_OF_PAIRS = 6; // Anzahl der Paare (also 12 Karten insgesamt)
 
 const allImages = [
   'img/Bild_001.jpg', 'img/Bild_002.jpg', 'img/Bild_003.jpg',
@@ -35,6 +35,7 @@ let flipped = [];
 let matched = 0;
 let startTime;
 let selected = [];
+let attempts = 0;
 
 function shuffle(array) {
   return array.sort(() => 0.5 - Math.random());
@@ -43,6 +44,7 @@ function shuffle(array) {
 function createBoard() {
   const board = document.getElementById('game-board');
   board.innerHTML = '';
+
   selected = getRandomImages(allImages, NUMBER_OF_PAIRS);
   images = shuffle([...selected, ...selected]);
 
@@ -51,9 +53,14 @@ function createBoard() {
     src: src,
     matched: false
   }));
+
   startTime = new Date();
   matched = 0;
+  flipped = [];
+  attempts = 0;
+
   document.getElementById('result').textContent = '';
+  document.getElementById('attempts').textContent = 'Versuche: 0';
 
   cards.forEach((card, index) => {
     const div = document.createElement('div');
@@ -86,12 +93,15 @@ function checkMatch() {
   const div1 = document.querySelector(`[data-index='${i1}']`);
   const div2 = document.querySelector(`[data-index='${i2}']`);
 
+  attempts += 1;
+  document.getElementById('attempts').textContent = `Versuche: ${attempts}`;
+
   if (c1.src === c2.src) {
     c1.matched = true;
     c2.matched = true;
-    matched += 1;
+    matched += 2;
 
-    if (matched === NUMBER_OF_PAIRS) {
+    if (matched === NUMBER_OF_PAIRS * 2) {
       const duration = Math.floor((new Date() - startTime) / 1000);
       const minutes = Math.floor(duration / 60);
       const seconds = duration % 60;
@@ -104,6 +114,7 @@ function checkMatch() {
     div1.innerHTML = '';
     div2.innerHTML = '';
   }
+
   flipped = [];
 }
 
